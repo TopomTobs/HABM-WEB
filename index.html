@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Bibliothek</title>
+    <title>Portfolio - Markus Hablesreiter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-<script src="./app/app.js"></script>
+    <header class="topbar">
+        <button id="burger" class="burger" aria-label="Menü">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1 class="site-title">Portfolio</h1>
+    </header>
+
+    <nav id="sidebar" class="sidebar" aria-label="Personenavigation">
+        <div class="nav-header">
+            <h2>Personen</h2>
+        </div>
+        <ul id="personList" class="person-list">
+            <!-- Wird von JavaScript gefüllt -->
+        </ul>
+        <div class="sidebar-footer">
+            <p class="soviet-tag">Arbeiten macht frei</p>
+        </div>
+    </nav>
+
+    <main id="content" class="content" role="main">
+        <!-- Inhalte werden dynamisch geladen -->
+    </main>
+
+    <script src="./app/app.js"></script>
 
 
 </body>

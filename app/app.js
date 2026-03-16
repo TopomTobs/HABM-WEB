@@ -1,101 +1,175 @@
-class car{
+const data = {
+  persons: [
+    {
+      id: 'markus',
+      name: 'Markus Hablesreiter',
+      role: 'IT-Lehrer an der HTL Wels',
+      summary:
+        'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
+      education: [
+        {
+          title: 'HTL Maschinenbau',
+          institution: 'HTL Wels',
+          year: 'Abschluss 2010',
+          details:
+            'Fundierte Ausbildung in Mechanik, Fertigungstechnik und Konstruktion. Schwerpunkt: Betriebstechnik & Steuerungstechnik.',
+        },
+        {
+          title: 'Studium Mathematik',
+          institution: 'Universität (Dipl.-Ing.)',
+          year: 'Abschluss 2014',
+          details:
+            'Mathematische Modellierung, Statistik und numerische Methoden – Basis für präzises Denken im Projektunterricht.',
+        },
+        {
+          title: 'Lehrtätigkeit IT & Mathematik',
+          institution: 'HTL Wels',
+          year: 'seit 2016',
+          details:
+            'Unterrichtet IT-Grundlagen, Programmieren, Netzwerktechnik und mathematische Grundlagen für Technikerschüler.',
+        },
+      ],
+      skills: [
+        'JavaScript / Webentwicklung',
+        'Python & Automatisierung',
+        'Mathematik & Statistik',
+        'Didaktik & Projektbegleitung',
+        'CAD / Konstruktion',
+      ],
+      highlights: [
+        'Teamprojekte mit HTL-Schülern zur digitalen Fertigung',
+        'Lehrplanentwicklung im Bereich Informatik',
+        'Tutor für Schulwettbewerbe und Hackathons',
+      ],
+      placeholders: [
+        'Profilbild (Platzhalter)',
+        'Projektdokumentation (Platzhalter)',
+      ],
+    },
+    {
+      id: 'person2',
+      name: 'Person 2 (Platzhalter)',
+      role: 'Später erweiterbar',
+      summary:
+        'Hier können später weitere Personen ergänzt werden. Klick dich gern durch die verschiedenen Profile.',
+      education: [],
+      skills: [],
+      highlights: [],
+      placeholders: ['Bild 1 (Platzhalter)', 'Bild 2 (Platzhalter)'],
+    },
+  ],
+};
 
-constructor(brand, model, year, milage, iselectric){
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
-    this.milage = milage;
-    this.iselectric = iselectric;
+const sidebar = document.getElementById('sidebar');
+const burger = document.getElementById('burger');
+const content = document.getElementById('content');
+const personList = document.getElementById('personList');
 
+function toggleSidebar() {
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('visible');
+  content.classList.toggle('shifted');
 }
 
-getInfo(){
-    var electric = this.iselectric ? "elektrisch" : "nicht elektrisch";
-    return `${this.brand} ${this.model} (${this.year}) – ${this.milage} km, ${electric}`;
+function closeSidebar() {
+  sidebar.classList.remove('open');
+  overlay.classList.remove('visible');
+  content.classList.remove('shifted');
 }
 
+function createOverlay() {
+  const overlayEl = document.createElement('div');
+  overlayEl.className = 'overlay';
+  overlayEl.addEventListener('click', closeSidebar);
+  document.body.appendChild(overlayEl);
+  return overlayEl;
 }
 
+const overlay = createOverlay();
 
-let cars = [
-    new car("Tesla", "Model 3", 2020, 15000, true),
-    new car("Volkswagen", "Golf", 2018, 30000, false),
-    new car("BMW", "i3", 2019, 20000, true),
-    new car("Audi", "A4", 2017, 40000, false),
-    new car("Nissan", "Leaf", 2021, 10000, true)
-];
-
-
-// Alle Fahrzeuge ausgeben
-document.write("<h1>Alle Fahrzeuge:</h1><br>");
-for(let car of cars){
-    document.write(car.getInfo() + "<br>");
+function renderPersonList() {
+  personList.innerHTML = '';
+  data.persons.forEach((person) => {
+    const item = document.createElement('li');
+    item.className = 'person-item';
+    item.textContent = person.name;
+    item.dataset.personId = person.id;
+    item.addEventListener('click', () => {
+      selectPerson(person.id);
+      closeSidebar();
+    });
+    personList.appendChild(item);
+  });
 }
 
-document.write("<br><h1>Elektrofahrzeuge:</h1><br>");
-for(let car of cars){
-    if(car.iselectric){
-    document.write(car.getInfo() + "<br>");
+function renderPerson(person) {
+  const educationItems = person.education
+    .map(
+      (edu) =>
+        `<li><strong>${edu.title}</strong> — ${edu.institution} <span class="highlight">(${edu.year})</span><br><small>${edu.details}</small></li>`
+    )
+    .join('');
+
+  const skillItems = person.skills
+    .map((skill) => `<li>${skill}</li>`)
+    .join('');
+
+  const highlightItems = person.highlights
+    .map((point) => `<li>${point}</li>`)
+    .join('');
+
+  const placeholderImages = person.placeholders
+    .map(
+      (label) =>
+        `<div class="placeholder-image">${label}<br><span class="badge">Bild hier</span></div>`
+    )
+    .join('');
+
+  content.innerHTML = `
+    <section class="section">
+      <h2>${person.name}</h2>
+      <p class="highlight">${person.role}</p>
+      <p>${person.summary}</p>
+      ${placeholderImages}
+    </section>
+
+    <section class="section">
+      <h2>Bildung</h2>
+      <ul class="list">${educationItems}</ul>
+    </section>
+
+    <section class="section">
+      <h2>Kenntnisse</h2>
+      <ul class="list">${skillItems}</ul>
+    </section>
+
+    <section class="section">
+      <h2>Highlights</h2>
+      <ul class="list">${highlightItems}</ul>
+    </section>
+  `;
+
+  document.querySelectorAll('.person-item').forEach((item) => {
+    item.classList.toggle('active', item.dataset.personId === person.id);
+  });
+}
+
+function selectPerson(personId) {
+  const person = data.persons.find((p) => p.id === personId);
+  if (!person) return;
+  renderPerson(person);
+}
+
+function init() {
+  renderPersonList();
+  selectPerson(data.persons[0].id);
+  burger.addEventListener('click', toggleSidebar);
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 860) {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('visible');
     }
+  });
 }
 
-document.write("<br><h1>Statistiken:</h1><br>");
-document.write("<b>Durchschnittsalter:</b> " + getAverageAge(cars).toFixed(1) + " Jahre<br>");
-document.write("<b>Fahrzeug mit maximaler Laufleistung:</b> " + getMaxMileageCar(cars).getInfo() + "<br>");
-
-
-document.write("<h1>Alle Fahrzeuge nach Laufleistung sortiert:</h1><br>");
-for(let car of getCarsSortedByMilage(cars)){
-    document.write(car.getInfo() + "<br>");
-}
-// Suche nach Marke
-function searchCarsByBrand(cars, brand) {
-    const lowerBrand = brand.toLowerCase();
-    return cars.filter(car => car.brand.toLowerCase() === lowerBrand);
-}
-
-
-
-// Suche ausführen
-searchCar();
-
-
-
-
-function searchCar() {
-    const brand = prompt("Geben Sie eine Marke ein:");
-    if (brand) {
-        const results = searchCarsByBrand(cars, brand);
-        document.write("<br><h1>Suchergebnisse für '" + brand + "':</h1><br>");
-        if (results.length > 0) {
-            for (let car of results) {
-                document.write(car.getInfo() + "<br>");
-            }
-        } else {
-            document.write("Keine Fahrzeuge gefunden.<br>");
-        }
-    }
-}
-function getCarsSortedByMilage(cars) {
-    return cars.sort((a, b) =>   b.milage -a.milage);
-}
-
-function getElectricCars(cars) {
-    return cars.filter(car => car.iselectric === true);
-}
-
-// b) Durchschnittsalter – berechnet das durchschnittliche Alter aller Fahrzeuge
-function getAverageAge(cars) {
-    if (cars.length === 0) return 0;
-    const currentYear = new Date().getFullYear();
-    const totalAge = cars.reduce((sum, car) => sum + (currentYear - car.year), 0);
-    return totalAge / cars.length;
-}
-
-// c) Maximal-Laufleistung – liefert das Fahrzeug mit der größten mileage
-function getMaxMileageCar(cars) {
-    if (cars.length === 0) return null;
-    return cars.reduce((max, car) => car.milage > max.milage ? car : max);
-}
-
-
+init();
