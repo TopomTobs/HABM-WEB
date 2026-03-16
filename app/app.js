@@ -43,7 +43,6 @@ const data = {
         'Tutor für Schulwettbewerbe und Hackathons',
       ],
       placeholders: [
-        'Profilbild (Platzhalter)',
         'Projektdokumentation (Platzhalter)',
       ],
     },
@@ -57,6 +56,37 @@ const data = {
       skills: [],
       highlights: [],
       placeholders: ['Bild 1 (Platzhalter)', 'Bild 2 (Platzhalter)'],
+    },
+    {
+      id: 'laurenz',
+      name: 'Laurenz Durkowitsch',
+      role: 'Schüler an der HTL Wels',
+      profileImage: 'Assets/lolo1.png',
+      summary:
+        'Laurenz ist ein leidenschaftlicher kroatischer Nationalist, der seine Wurzeln stolz vertritt. Als Schüler an der HTL Wels teilt er seine Zeit zwischen intensivem Schlaf in der Schule und aktiven Outdoor-Abenteuern. Wenn er nicht gerade döst, tracktiert er seine Mitschüler mit seinem scharfen Witz und seiner energischen Persönlichkeit. Seine Leidenschaft gilt dem Eisklettern und Felsenklettern, wo er die Herausforderungen der Natur meistert.',
+      education: [
+        {
+          title: 'HTL Wels',
+          institution: 'HTL Wels',
+          year: 'aktuell',
+          details:
+            'Besucht die Höhere Technische Lehranstalt Wels, mit Fokus auf technische Fächer und praktische Ausbildung.',
+        },
+      ],
+      skills: [
+        'Kroatisch nationalistische Kultur',
+        'Eisklettern & Felsenklettern',
+        'Schlafoptimierung (Schule)',
+        'Mitschüler-Interaktion',
+      ],
+      highlights: [
+        'Meister im strategischen Schlafen während des Unterrichts',
+        'Erfolgreiche Klettertouren in den Alpen',
+        'Stolzer Vertreter kroatischer Traditionen',
+      ],
+      placeholders: [
+        //'Assets/lolo2.png',
+      ],
     },
   ],
 };
@@ -124,10 +154,13 @@ function renderPerson(person) {
     : '';
 
   const placeholderImages = person.placeholders
-    .map(
-      (label) =>
-        `<div class="placeholder-image">${label}<br><span class="badge">Bild hier</span></div>`
-    )
+    .map((label) => {
+      if (label.startsWith('Assets/')) {
+        return `<div class="placeholder-image"><img src="${label}" alt="${label}"></div>`;
+      } else {
+        return `<div class="placeholder-image">${label}<br><span class="badge">Bild hier</span></div>`;
+      }
+    })
     .join('');
 
   content.innerHTML = `

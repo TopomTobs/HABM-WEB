@@ -299,12 +299,8 @@ a:hover {
 }
 
 @media (min-width: 860px) {
-    .sidebar {
-        transform: translateX(0);
-    }
-
     .content {
-        margin-left: 280px;
+        margin-left: 0;
     }
 
     .overlay {
