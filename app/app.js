@@ -4,11 +4,12 @@ const data = {
       id: 'markus',
       name: 'Markus Hablesreiter',
       role: 'IT-Lehrer an der HTL Wels',
+      profileImage: 'Assets/HABM.jpg',
       summary:
         'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
       education: [
         {
-          title: 'HTL Maschinenbau',
+          title: 'HTL IT-Mechanik',
           institution: 'HTL Wels',
           year: 'Abschluss 2010',
           details:
@@ -118,6 +119,10 @@ function renderPerson(person) {
     .map((point) => `<li>${point}</li>`)
     .join('');
 
+  const profileImage = person.profileImage
+    ? `<div class="profile-image"><img src="${person.profileImage}" alt="Profilbild ${person.name}"></div>`
+    : '';
+
   const placeholderImages = person.placeholders
     .map(
       (label) =>
@@ -129,6 +134,7 @@ function renderPerson(person) {
     <section class="section">
       <h2>${person.name}</h2>
       <p class="highlight">${person.role}</p>
+      ${profileImage}
       <p>${person.summary}</p>
       ${placeholderImages}
     </section>
