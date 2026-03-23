@@ -95,44 +95,32 @@ const data = {
       role: 'Lolos Affaire',
       profileImage: 'Assets/Ayshee_Mueller.png',
       summary:
-        'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
+        'Ayshee ist eine geheimnisvolle und faszinierende Persönlichkeit, die als Lolos Affaire bekannt ist. Sie hat eine enge Beziehung zu Laurenz, dem Schüler an der HTL Wels, und teilt mit ihm eine besondere Verbindung. Ayshee ist für ihre charmante und einnehmende Art bekannt, die sie in sozialen Kreisen beliebt macht. Ihre Interessen und Aktivitäten sind vielfältig, und sie bringt eine einzigartige Dynamik in Laurenzs Leben. Ihr leben verbringt sie ausschließlich zu Hause in der koratischen Botschft wo sie für Lolos wohl sorgt.',
       education: [
         {
-          title: 'HTL IT-Mechanik',
-          institution: 'HTL Wels',
-          year: 'Abschluss 2010',
+          title: 'MaHF (Master of House Frau)',
+          institution: 'FH Kabul for Applied IS',
+          year: 'Abschluss September 2001',
           details:
             'Fundierte Ausbildung in Mechanik, Fertigungstechnik und Konstruktion. Schwerpunkt: Betriebstechnik & Steuerungstechnik.',
         },
-        {
-          title: 'Studium Mathematik',
-          institution: 'Universität (Dipl.-Ing.)',
-          year: 'Abschluss 2014',
-          details:
-            'Mathematische Modellierung, Statistik und numerische Methoden – Basis für präzises Denken im Projektunterricht.',
-        },
-        {
-          title: 'Lehrtätigkeit IT & Mathematik',
-          institution: 'HTL Wels',
-          year: 'seit 2016',
-          details:
-            'Unterrichtet IT-Grundlagen, Programmieren, Netzwerktechnik und mathematische Grundlagen für Technikerschüler.',
-        },
+        
       ],
       skills: [
-        'JavaScript / Webentwicklung',
+        'Butzen / Kochen',
         'Python & Automatisierung',
-        'Mathematik & Statistik',
-        'Didaktik & Projektbegleitung',
-        'CAD / Konstruktion',
+        'Stochastik & Statistik',
+        'Didaktik & Gebärung',
+        'Kroatischer Charme',
       ],
       highlights: [
-        'Teamprojekte mit HTL-Schülern zur digitalen Fertigung',
-        'Lehrplanentwicklung im Bereich Informatik',
-        'Tutor für Schulwettbewerbe und Hackathons',
+        'Wäre Laurenz nicht zeugungsunfähig, hätte Ayshee bereit 10 Kinder mit ihm',
+        'Meisterin im Butzen und Kochen für Laurenz',
+        'Unschlagbare Fähigkeiten im Stochastischen Denken, besonders in Bezug auf die Wahrscheinlichkeit, dass Laurenz jemals erwachsen wird.',
+        'Verteidigerin von Laurenz in sozialen Situationen, insbesondere wenn es um seine Schlafgewohnheiten geht.',
       ],
       placeholders: [
-        'Projektdokumentation (Platzhalter)',
+        'Sichtungen von Ayshee hier hochladen',
       ],
     },
   ],
