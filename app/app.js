@@ -47,15 +47,16 @@ const data = {
       ],
     },
     {
-      id: 'person2',
-      name: 'Person 2 (Platzhalter)',
-      role: 'Später erweiterbar',
+      id: 'ShenZ',
+      name: 'ShenZ ',
+      role: 'NWT Großmeister an der HTL Wels',
+      profileImage: 'Assets/ShenZ.png',
       summary:
-        'Hier können später weitere Personen ergänzt werden. Klick dich gern durch die verschiedenen Profile.',
+        'ShenZ ist ein erfahrener NWT-Lehrer, der mit seiner ruhigen und geduldigen Art komplexe naturwissenschaftliche und technische Konzepte vermittelt. Er legt großen Wert auf praktische Anwendungen und fördert das kritische Denken seiner Schüler, um sie auf die Herausforderungen der modernen Technik vorzubereiten. Besonderen Wert legt er auf die Sozialen Kompetenzen welche er im SOPK, NWT sowie ITS Unterricht vermittelt.',
       education: [],
       skills: [],
       highlights: [],
-      placeholders: ['Bild 1 (Platzhalter)', 'Bild 2 (Platzhalter)'],
+      placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
     },
     {
       id: 'laurenz',
@@ -70,7 +71,7 @@ const data = {
           institution: 'HTL Wels',
           year: 'aktuell',
           details:
-            'Besucht die Höhere Technische Lehranstalt Wels, mit Fokus auf technische Fächer und praktische Ausbildung.',
+            'Besucht die Höhere Technische Lehranstalt Wels, mit Fokus auf technische Fächer und praktische Ausbildung.Die Ausbildung wird voraussichtlich 7 Jahre dauern.',
         },
       ],
       skills: [
@@ -86,6 +87,52 @@ const data = {
       ],
       placeholders: [
         //'Assets/lolo2.png',
+      ],
+    },
+    {
+      id: 'Ayshee',
+      name: 'Ayshee Müller',
+      role: 'Lolos Affaire',
+      profileImage: 'Assets/Ayshee_Mueller.png',
+      summary:
+        'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
+      education: [
+        {
+          title: 'HTL IT-Mechanik',
+          institution: 'HTL Wels',
+          year: 'Abschluss 2010',
+          details:
+            'Fundierte Ausbildung in Mechanik, Fertigungstechnik und Konstruktion. Schwerpunkt: Betriebstechnik & Steuerungstechnik.',
+        },
+        {
+          title: 'Studium Mathematik',
+          institution: 'Universität (Dipl.-Ing.)',
+          year: 'Abschluss 2014',
+          details:
+            'Mathematische Modellierung, Statistik und numerische Methoden – Basis für präzises Denken im Projektunterricht.',
+        },
+        {
+          title: 'Lehrtätigkeit IT & Mathematik',
+          institution: 'HTL Wels',
+          year: 'seit 2016',
+          details:
+            'Unterrichtet IT-Grundlagen, Programmieren, Netzwerktechnik und mathematische Grundlagen für Technikerschüler.',
+        },
+      ],
+      skills: [
+        'JavaScript / Webentwicklung',
+        'Python & Automatisierung',
+        'Mathematik & Statistik',
+        'Didaktik & Projektbegleitung',
+        'CAD / Konstruktion',
+      ],
+      highlights: [
+        'Teamprojekte mit HTL-Schülern zur digitalen Fertigung',
+        'Lehrplanentwicklung im Bereich Informatik',
+        'Tutor für Schulwettbewerbe und Hackathons',
+      ],
+      placeholders: [
+        'Projektdokumentation (Platzhalter)',
       ],
     },
   ],
