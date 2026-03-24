@@ -77,19 +77,19 @@ const data = {
       role: 'IT-Lehrer an der HTL Wels',
       profileImage: 'Assets/HABM.jpg',
       summary:
-        'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
+        'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben. Es mag woll keinen Fachbereich geben, in dem er nicht in der Lage ist, eine spannende Geschichte zu erzählen und die Neugier seiner Schüler zu wecken.',
       education: [
         {
           title: 'HTL IT-Mechanik',
           institution: 'HTL Wels',
-          year: 'Abschluss 2010',
+          year: 'Abschluss 2004',
           details:
             'Fundierte Ausbildung in Mechanik, Fertigungstechnik und Konstruktion. Schwerpunkt: Betriebstechnik & Steuerungstechnik.',
         },
         {
           title: 'Studium Mathematik',
           institution: 'Universität (Dipl.-Ing.)',
-          year: 'Abschluss 2014',
+          year: 'Abschluss 2010',
           details:
             'Mathematische Modellierung, Statistik und numerische Methoden – Basis für präzises Denken im Projektunterricht.',
         },
@@ -121,7 +121,7 @@ const data = {
       id: 'ShenZ',
       name: 'ShenZ ',
       role: 'NWT Großmeister an der HTL Wels',
-      profileImage: 'Assets/ShenZ.gif',
+      profileImage: 'Assets/ShenZ.png',
       summary:
         'ShenZ ist ein erfahrener NWT-Lehrer, der mit seiner ruhigen und geduldigen Art komplexe naturwissenschaftliche und technische Konzepte vermittelt. Er legt großen Wert auf praktische Anwendungen und fördert das kritische Denken seiner Schüler, um sie auf die Herausforderungen der modernen Technik vorzubereiten. Besonderen Wert legt er auf die Sozialen Kompetenzen welche er im SOPK, NWT sowie ITS Unterricht vermittelt.',
       education: [
