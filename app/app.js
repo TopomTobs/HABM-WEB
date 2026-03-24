@@ -50,21 +50,21 @@ const data = {
       id: 'ShenZ',
       name: 'ShenZ ',
       role: 'NWT Großmeister an der HTL Wels',
-      profileImage: 'Assets/ShenZ.png',
+      profileImage: 'Assets/ShenZ.gif',
       summary:
         'ShenZ ist ein erfahrener NWT-Lehrer, der mit seiner ruhigen und geduldigen Art komplexe naturwissenschaftliche und technische Konzepte vermittelt. Er legt großen Wert auf praktische Anwendungen und fördert das kritische Denken seiner Schüler, um sie auf die Herausforderungen der modernen Technik vorzubereiten. Besonderen Wert legt er auf die Sozialen Kompetenzen welche er im SOPK, NWT sowie ITS Unterricht vermittelt.',
-      education: [],
+      education: ['Bachelor in Elektrotechnik', 'Master in Pädagogik', 'Lehrtätigkeit seit 2002'],
       skills: [],
-      highlights: [],
+      highlights: ["Obwohl er schon seit 2002 an der HTL Wels unterrichtet, ist er immer noch der jüngste Lehrer an der Schule."],
       placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
     },
     {
       id: 'laurenz',
-      name: 'Laurenz Durkowitsch',
+      name: 'Lolo',
       role: 'Schüler an der HTL Wels',
-      profileImage: 'Assets/lolo1.png',
+      profileImage: 'Assets/LOLO.avif',
       summary:
-        'Laurenz ist ein leidenschaftlicher kroatischer Nationalist, der seine Wurzeln stolz vertritt. Als Schüler an der HTL Wels teilt er seine Zeit zwischen intensivem Schlaf in der Schule und aktiven Outdoor-Abenteuern. Wenn er nicht gerade döst, tracktiert er seine Mitschüler mit seinem scharfen Witz und seiner energischen Persönlichkeit. Seine Leidenschaft gilt dem Eisklettern und Felsenklettern, wo er die Herausforderungen der Natur meistert.',
+        'Lolo ist ein leidenschaftlicher kroatischer Nationalist, der seine Wurzeln stolz vertritt. Als Schüler an der HTL Wels teilt er seine Zeit zwischen intensivem Schlaf in der Schule und aktiven Outdoor-Abenteuern. Wenn er nicht gerade döst, tracktiert er seine Mitschüler mit seinem scharfen Witz und seiner energischen Persönlichkeit. Seine Leidenschaft gilt dem Eisklettern und Felsenklettern, wo er die Herausforderungen der Natur meistert.',
       education: [
         {
           title: 'HTL Wels',
