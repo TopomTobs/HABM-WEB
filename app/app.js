@@ -1,3 +1,74 @@
+// ============================================
+// PASSWORD PROTECTION WITH SHA-256 HASHING
+// ============================================
+// Default password hash (SHA-256 of "test123")
+// To generate your own hash: 
+// await sha256("your_password") in browser console
+const CORRECT_PASSWORD_HASH = "12dcba6f6ee644657c01c710ce57be906cd1d898a1036c0a2364bf1d96031ec5";
+
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+let passwordVerified = false;
+
+async function initPasswordProtection() {
+    const modal = document.getElementById('passwordModal');
+    const input = document.getElementById('passwordInput');
+    const btn = document.getElementById('passwordBtn');
+    const errorDiv = document.getElementById('passwordError');
+
+    // Focus on input when modal is shown
+    input.focus();
+
+    // Handle Enter key
+    input.addEventListener('keypress', async (e) => {
+        if (e.key === 'Enter') {
+            await verifyPassword();
+        }
+    });
+
+    // Handle button click
+    btn.addEventListener('click', verifyPassword);
+
+    async function verifyPassword() {
+        const password = input.value;
+        if (!password) {
+            errorDiv.textContent = 'Bitte geben Sie ein Passwort ein';
+            return;
+        }
+
+        const hash = await sha256(password);
+        if (hash === CORRECT_PASSWORD_HASH) {
+            passwordVerified = true;
+            modal.classList.add('hidden');
+            input.value = '';
+            errorDiv.textContent = '';
+        } else {
+            errorDiv.textContent = 'Falsches Passwort, bitte versuchen Sie es erneut';
+            input.value = '';
+            input.focus();
+        }
+    }
+}
+
+// Initialize password protection immediately
+document.addEventListener('DOMContentLoaded', initPasswordProtection);
+
+// Prevent access to page content until password is verified
+const sidebarLinks = document.addEventListener('click', function(e) {
+    if (!passwordVerified && (e.target.closest('#personList') || e.target.closest('#content'))) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+}, true);
+
+// ============================================
+// APPLICATION DATA
+// ============================================
 const data = {
   persons: [
     {
@@ -53,7 +124,24 @@ const data = {
       profileImage: 'Assets/ShenZ.gif',
       summary:
         'ShenZ ist ein erfahrener NWT-Lehrer, der mit seiner ruhigen und geduldigen Art komplexe naturwissenschaftliche und technische Konzepte vermittelt. Er legt großen Wert auf praktische Anwendungen und fördert das kritische Denken seiner Schüler, um sie auf die Herausforderungen der modernen Technik vorzubereiten. Besonderen Wert legt er auf die Sozialen Kompetenzen welche er im SOPK, NWT sowie ITS Unterricht vermittelt.',
-      education: ['Bachelor in Elektrotechnik', 'Master in Pädagogik', 'Lehrtätigkeit seit 2002'],
+      education: [
+      {
+        title: 'HTL IT-Elek',
+          institution: 'HTL Wels',
+          year: 'Abschluss 1992',
+          details:
+            'Fundierte Ausbildung in Elektrotechnik, Psychologie'},
+            {title: 'Lehrtätigkeit NWT',
+          institution: 'HTL Wels',
+          year: 'seit 2002',
+          details:
+            'Unterrichtet Naturwissenschaft und Technik, mit Fokus auf praktische Anwendungen und kritisches Denken.'},
+            {title: 'Master SOPK & ITS',
+          institution: 'HTL Wels',
+          year: 'seit 2002',
+          details:
+            'Fördert soziale Kompetenzen und Teamarbeit durch spezielle Unterrichtseinheiten und Projekte.'},
+      ],
       skills: [],
       highlights: ["Obwohl er schon seit 2002 an der HTL Wels unterrichtet, ist er immer noch der jüngste Lehrer an der Schule."],
       placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
@@ -114,7 +202,7 @@ const data = {
         'Kroatischer Charme',
       ],
       highlights: [
-        'Wäre Laurenz nicht zeugungsunfähig, hätte Ayshee bereit 10 Kinder mit ihm',
+        'Wäre Laurenz nicht zeugungsunfähig, hätte Ayshee bereits 10 Kinder mit ihm',
         'Meisterin im Butzen und Kochen für Laurenz',
         'Unschlagbare Fähigkeiten im Stochastischen Denken, besonders in Bezug auf die Wahrscheinlichkeit, dass Laurenz jemals erwachsen wird.',
         'Verteidigerin von Laurenz in sozialen Situationen, insbesondere wenn es um seine Schlafgewohnheiten geht.',
