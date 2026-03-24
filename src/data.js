@@ -36,6 +36,7 @@ export const data = {
         'Mathematik & Statistik',
         'Didaktik & Projektbegleitung',
         'CAD / Konstruktion',
+        'Er weis nichts über diese Seite',
       ],
       highlights: [
         'Teamprojekte mit HTL-Schülern zur digitalen Fertigung',
