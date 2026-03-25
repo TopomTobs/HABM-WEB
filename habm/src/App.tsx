@@ -33,7 +33,7 @@ const persons: Person[] = [
   {
     id: 'markus',
     name: 'Markus Hablesreiter',
-    role: 'IT-Lehrer an der HTL Wels',
+    role: 'Java CEO an der HTL Wels',
     profileImage: './assets/markus.jpg',
     summary:
       'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
