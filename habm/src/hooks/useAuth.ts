@@ -24,6 +24,9 @@ export const useAuth = () => {
       setPasswordVerified(true)
       setPassword('')
       setMessage('')
+      // Play Soviet National Anthem
+      const audio = new Audio('/01%20-%20The%20Alexandrov%20Red%20Army%20Chorus%20-%20Soviet%20National%20Anthem.flac')
+      audio.play().catch((err) => console.error('Failed to play anthem:', err))
     } else {
       setMessage('Falsches Passwort, bitte versuchen Sie es erneut')
       setPassword('')
