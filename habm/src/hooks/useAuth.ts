@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const CORRECT_PASSWORD_HASH = '12dcba6f6ee644657c01c710ce57be906cd1d898a1036c0a2364bf1d96031ec5'
+const CORRECT_PASSWORD_HASH = 'dd166db3780fe9d8b38844b737288867ce50ec6f06590785b2d598c8a979dc7a'
 
 async function sha256(message: string) {
   const msgBuffer = new TextEncoder().encode(message)

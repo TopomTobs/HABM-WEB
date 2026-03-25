@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import type { Person } from '../types'
 
 interface PersonComponentProps {
@@ -5,6 +6,14 @@ interface PersonComponentProps {
 }
 
 export const PersonComponent = ({ person }: PersonComponentProps) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+
+  // Reset loading state when person changes
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setImageLoaded(false)
+  }, [person.id])
+
   const renderEducation = (person: Person) =>
     person.education.map((edu) => (
       <li key={`${person.id}-${edu.title}`}>
@@ -40,8 +49,14 @@ export const PersonComponent = ({ person }: PersonComponentProps) => {
         <h2>{person.name}</h2>
         <p className="highlight">{person.role}</p>
         {person.profileImage && (
-          <div className="profile-image">
-            <img src={person.profileImage} alt={`Profilbild ${person.name}`} />
+          <div className={`profile-image ${imageLoaded ? 'loaded' : 'loading'}`}>
+            {!imageLoaded && <div className="loading-text">Profilbild {person.name}</div>}
+            <img 
+              src={person.profileImage} 
+              alt={`Profilbild ${person.name}`}
+              onLoad={() => setImageLoaded(true)}
+              style={{ display: imageLoaded ? 'block' : 'none' }}
+            />
           </div>
         )}
         <p>{person.summary}</p>

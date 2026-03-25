@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+body.authenticated {
+    cursor: url('/cursor-soviet.svg') 16 16, auto;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', system-ui, sans-serif;
@@ -321,7 +325,23 @@ a:hover {
 .profile-image {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 18px 0 8px;
+    min-height: 280px;
+}
+
+.profile-image.loading {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 221, 0, 0.15);
+}
+
+.loading-text {
+    color: rgba(255, 221, 0, 0.7);
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 0.05em;
 }
 
 .profile-image img {

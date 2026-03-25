@@ -26,6 +26,15 @@ function App() {
     }
   }, [innerWidth])
 
+  useEffect(() => {
+    // Add or remove authenticated class from body based on password verification
+    if (passwordVerified) {
+      document.body.classList.add('authenticated')
+    } else {
+      document.body.classList.remove('authenticated')
+    }
+  }, [passwordVerified])
+
   const selectedPerson = useMemo(
     () => persons.find((p) => p.id === selectedPersonId) ?? persons[0],
     [selectedPersonId]
