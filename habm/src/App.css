@@ -138,6 +138,7 @@ a:hover {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin: 0;
+    color: rgba(245, 240, 232, 0.9);
 }
 
 .burger {
@@ -362,8 +363,9 @@ a:hover {
 }
 
 .list {
-    padding-left: 20px;
+    padding-left: 0;
     margin: 0;
+    list-style-position: inside;
 }
 
 .list li {
