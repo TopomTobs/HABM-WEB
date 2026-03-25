@@ -84,7 +84,7 @@ export const persons: Person[] = [
     id: 'laurenz',
     name: 'Lolo',
     role: 'Alias: Ali Mohammed',
-    profileImage: './src/assets/lolo1.png',
+    profileImage: '/lolo1.png',
     summary:
       'Lolo ist ein leidenschaftlicher kroatischer Nationalist, der seine Wurzeln stolz vertritt. Als Schüler an der HTL Wels teilt er seine Zeit zwischen intensivem Schlaf in der Schule und aktiven Outdoor-Abenteuern. Wenn er nicht gerade döst, tracktiert er seine Mitschüler mit seinem scharfen Witz und seiner energischen Persönlichkeit. Seine Leidenschaft gilt dem Eisklettern und Felsenklettern, wo er die Herausforderungen der Natur meistert.',
     education: [
