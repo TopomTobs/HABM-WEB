@@ -5,7 +5,7 @@ export const persons: Person[] = [
     id: 'markus',
     name: 'Markus Hablesreiter',
     role: 'Java CEO an der HTL Wels',
-    profileImage: './src/assets/HABM.jpg',
+    profileImage: '/HABM.jpg',
     summary:
       'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
     education: [
@@ -49,7 +49,7 @@ export const persons: Person[] = [
     id: 'ShenZ',
     name: 'ShenZ',
     role: 'NWT Großmeister an der HTL Wels',
-    profileImage: './src/assets/ShenZ.png',
+    profileImage: '/ShenZ.png',
     summary:
       'ShenZ ist ein erfahrener NWT-Lehrer, der mit seiner ruhigen und geduldigen Art komplexe naturwissenschaftliche und technische Konzepte vermittelt. Er legt großen Wert auf praktische Anwendungen und fördert das kritische Denken seiner Schüler, um sie auf die Herausforderungen der modernen Technik vorzubereiten. Besonderen Wert legt er auf die Sozialen Kompetenzen welche er im SOPK, NWT sowie ITS Unterricht vermittelt.',
     education: [
@@ -113,7 +113,7 @@ export const persons: Person[] = [
     id: 'Ayshee',
     name: 'Ayshee Müller',
     role: 'Lolos Affaire',
-    profileImage: './src/assets/Ayshee_Mueller.png',
+    profileImage: '/Ayshee_Mueller.png',
     summary:
       'Ayshee ist eine geheimnisvolle und faszinierende Persönlichkeit, die als Lolos Affaire bekannt ist. Sie hat eine enge Beziehung zu Laurenz, dem Schüler an der HTL Wels, und teilt mit ihm eine besondere Verbindung. Ayshee ist für ihre charmante und einnehmende Art bekannt, die sie in sozialen Kreisen beliebt macht. Ihre Interessen und Aktivitäten sind vielfältig, und sie bringt eine einzigartige Dynamik in Laurenzs Leben. Ihr leben verbringt sie ausschließlich zu Hause in der koratischen Botschft wo sie für Lolos wohl sorgt.',
     education: [
