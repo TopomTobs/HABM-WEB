@@ -167,7 +167,7 @@ const persons: Person[] = [
       'Unschlagbare Fähigkeiten im Stochastischen Denken, besonders in Bezug auf die Wahrscheinlichkeit, dass Laurenz jemals erwachsen wird.',
       'Verteidigerin von Laurenz in sozialen Situationen, insbesondere wenn es um seine Schlafgewohnheiten geht.',
     ],
-    placeholders: ['Sichtungen von Ayshee hier hochladen'],
+    placeholders: ['Sichtungen von Ayshee hier hochladen '],
   },
 ]
 
