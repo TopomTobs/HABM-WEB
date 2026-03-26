@@ -7,7 +7,7 @@ export const persons: Person[] = [
     role: 'Java CEO an der HTL Wels',
     profileImage: '/HABM.jpg',
     summary:
-      'Markus verbindet handwerkliches Denken aus dem Maschinenbau mit klaren mathematischen Strukturen und pädagogischer Leidenschaft. Er liebt es, komplexe Themen so zu erklären, dass sie auch für jene verständlich werden, die noch nie darüber nachgedacht haben.',
+      'Markus oder Maggus wie ihn seine Freunde nennen, ist wahrscheindlich die modernste Lehrkraft an der HTL Wels. Viel Wert legt er auf die Aktualität seiner Werkzeuge, dies demonstriert er an der Wahl seines Notebooks und der Java Version. Genau deshalb vertritt er auch den legendären Posten des Java CEOs. Mit seiner genössichen Art begeistert er die Schüler der 4. Klasse im Gegenstand Data Science',
     education: [
       {
         title: 'HTL IT-Mechanik',
@@ -44,7 +44,8 @@ export const persons: Person[] = [
       'Tutor für Schulwettbewerbe und Hackathons',
     ],
     placeholders: ['Projektdokumentation (Platzhalter)'],
-    images: ['/HABM.jpg'],
+    folder: '/HABM',
+    images: ['/HABM/HABM_Shredded1.png', '/HABM/markus-ruehl.jpg'],
   },
   {
     id: 'ShenZ',
@@ -80,7 +81,8 @@ export const persons: Person[] = [
       'Obwohl er schon seit 2002 an der HTL Wels unterrichtet, ist er immer noch der jüngste Lehrer an der Schule.',
     ],
     placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
-    images: ['/ShenZ.png'],
+    folder: '',
+    images: ['/ShenZ.png', '/ShenZ.gif'],
   },
   {
     id: 'laurenz',
@@ -110,7 +112,8 @@ export const persons: Person[] = [
       'Stolzer Vertreter kroatischer Traditionen',
     ],
     placeholders: [],
-    images: ['/lolo1.png', '/LOLO.avif'],
+    folder: '/LOLO',
+    images: ['/LOLO/LOLOsHochzeit.png', '/LOLO/PXL_20251119_102401925.jpg', '/LOLO/PXL_20251119_132347252.MP.jpg', '/LOLO/PXL_20251119_132348221.jpg', '/LOLO/PXL_20251119_132354254.MP.jpg', '/LOLO/PXL_20251119_132354509.jpg', '/LOLO/PXL_20251119_132452693.MP.jpg', '/LOLO/PXL_20260318_111854147.MP.jpg', '/LOLO/lolo2.png'],
   },
   {
     id: 'Ayshee',
@@ -142,6 +145,7 @@ export const persons: Person[] = [
       'Verteidigerin von Laurenz in sozialen Situationen, insbesondere wenn es um seine Schlafgewohnheiten geht.',
     ],
     placeholders: ['Sichtungen von Ayshee hier hochladen '],
-    images: ['/Ayshee_Mueller.png'],
+    folder: '',
+    images: ['/Ayshee_Mueller.png', '/Ayshee_Kind.png'],
   },
 ]

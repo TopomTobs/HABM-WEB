@@ -475,6 +475,8 @@ a:hover {
     max-height: 90vh;
     object-fit: contain;
 }
+
+
 @media (min-width: 860px) {
     .content {
         margin-left: 0;
