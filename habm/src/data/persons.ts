@@ -81,7 +81,7 @@ export const persons: Person[] = [
       'Obwohl er schon seit 2002 an der HTL Wels unterrichtet, ist er immer noch der jüngste Lehrer an der Schule.',
     ],
     placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
-    folder: '',
+    folder: '/ShenZ',
     images: ['/ShenZ.png', '/ShenZ.gif'],
   },
   {
@@ -145,7 +145,7 @@ export const persons: Person[] = [
       'Verteidigerin von Laurenz in sozialen Situationen, insbesondere wenn es um seine Schlafgewohnheiten geht.',
     ],
     placeholders: ['Sichtungen von Ayshee hier hochladen '],
-    folder: '',
+    folder: '/Ayshee',
     images: ['/Ayshee_Mueller.png', '/Ayshee_Kind.png'],
   },
 ]
