@@ -244,6 +244,104 @@ button {
     border-color: rgba(255, 221, 0, 0.8);
 }
 
+.extras-section {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 221, 0, 0.15);
+    padding-top: 18px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 221, 0, 0.95);
+}
+
+.extras-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 10px 0 0 0;
+    display: grid;
+    gap: 6px;
+}
+
+.extras-item {
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 221, 0, 0.25);
+    border-radius: 8px;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s ease;
+    font-size: 0.9rem;
+}
+
+.extras-item:hover {
+    background: rgba(255, 221, 0, 0.1);
+}
+
+.extras-item.active {
+    background: rgba(255, 221, 0, 0.18);
+    border-color: rgba(255, 221, 0, 0.8);
+}
+
+.animal-list {
+    display: grid;
+    gap: 20px;
+}
+
+.animal-card {
+    background: rgba(19, 12, 10, 0.52);
+    border: 1px solid rgba(255, 221, 0, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: background 0.2s ease;
+}
+
+.animal-card:hover {
+    background: rgba(19, 12, 10, 0.70);
+    border-color: rgba(255, 221, 0, 0.5);
+}
+
+.animal-image {
+    flex-shrink: 0;
+}
+
+.animal-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 221, 0, 0.25);
+}
+
+.animal-info {
+    flex: 1;
+}
+
+.animal-info h3 {
+    margin: 0 0 8px 0;
+    color: rgba(255, 221, 0, 0.95);
+    font-size: 1.1rem;
+}
+
+.animal-reason {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
 .sidebar-footer {
     position: absolute;
     bottom: 18px;
@@ -479,6 +577,8 @@ button {
     max-height: 90vh;
     object-fit: contain;
 }
+
+
 @media (min-width: 860px) {
     .content {
         margin-left: 0;

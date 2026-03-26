@@ -15,5 +15,15 @@ export type Person = {
   skills: string[]
   highlights: string[]
   placeholders: string[]
+
+
+  folder: string
   images: string[]
+}
+
+export type Animal = {
+  id: string
+  name: string
+  picture: string
+  reason: string
 }
