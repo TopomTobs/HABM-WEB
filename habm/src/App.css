@@ -14,7 +14,7 @@
 }
 
 body.authenticated {
-    cursor: url('/Hammer_Sickle.svg') 64 64, auto;
+    cursor: url('/Hammer_Sickle.svg') 64 64, auto; /*Courser fi*/
 }
 
 body {
