@@ -20,3 +20,10 @@ export type Person = {
   folder: string
   images: string[]
 }
+
+export type Animal = {
+  id: string
+  name: string
+  picture: string
+  reason: string
+}
