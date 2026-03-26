@@ -113,7 +113,7 @@ export const persons: Person[] = [
     ],
     placeholders: [],
     folder: '/LOLO',
-    images: ['/LOLO/LOLOsHochzeit.png', '/LOLO/PXL_20251119_102401925.jpg', '/LOLO/PXL_20251119_132347252.MP.jpg', '/LOLO/PXL_20251119_132348221.jpg', '/LOLO/PXL_20251119_132354254.MP.jpg', '/LOLO/PXL_20251119_132354509.jpg', '/LOLO/PXL_20251119_132452693.MP.jpg', '/LOLO/PXL_20260318_111854147.MP.jpg', '/LOLO/lolo2.png'],
+    images: ['/LOLO/LOLO_EIS.jpg', '/LOLO/LOLOsHochzeit.png', '/LOLO/PXL_20251119_102401925.jpg', '/LOLO/PXL_20251119_132347252.MP.jpg', '/LOLO/PXL_20251119_132348221.jpg', '/LOLO/PXL_20251119_132354254.MP.jpg', '/LOLO/PXL_20251119_132354509.jpg', '/LOLO/PXL_20251119_132452693.MP.jpg', '/LOLO/lolo2.png'],
   },
   {
     id: 'Ayshee',
@@ -147,5 +147,26 @@ export const persons: Person[] = [
     placeholders: ['Sichtungen von Ayshee hier hochladen '],
     folder: '/Ayshee',
     images: ['/Ayshee/Ayshee_Kind.png', '/Ayshee/Ayshee_Mueller.png'],
+  },
+  {
+    id: 'Tops',
+    name: 'Tops',
+    role: '',
+    profileImage: '/Tops.jpg',
+    summary: '',
+    education: [
+      {
+        title: '',
+        institution: '',
+        year: '',
+        details:
+          '',
+      },
+    ],
+    skills: [],
+    highlights: [],
+    placeholders: [],
+    folder: '/Tops',
+    images: ['/Tops/1.jpg', '/Tops/2.jpg', '/Tops/3.jpg', '/Tops/4.jpg', '/Tops/5.jpg', '/Tops/6.jpg', '/Tops/7.jpg', '/Tops/8.jpg'],
   },
 ]
