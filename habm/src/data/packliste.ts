@@ -16,13 +16,13 @@ export const packliste: Animal[] = [
   {
     id: 'Dario',
     name: 'Dario',
-    picture: '/LOLO.avif',
+    picture: '/Dario.png',
     reason: 'Missbrauch von Kindern wird vermutet'
   },
   {
     id: 'animal4',
     name: 'Leck Ei',
-    picture: '/LOLO.avif',
+    picture: '/EierMann.jpeg',
     reason: 'Will nicht Zahlen'
   },
 ]

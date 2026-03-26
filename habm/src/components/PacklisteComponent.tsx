@@ -8,7 +8,7 @@ export const PacklisteComponent = ({ animals }: PacklisteComponentProps) => {
   return (
     <>
       <section className="section">
-        <h2>Packliste - Meist gesuchte Tiere</h2>
+        <h2>Packliste - Meist gesuchte Verbrecher</h2>
         <div className="animal-list">
           {animals.map((animal) => (
             <div key={animal.id} className="animal-card">
