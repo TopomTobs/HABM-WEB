@@ -45,7 +45,7 @@ export const persons: Person[] = [
     ],
     placeholders: ['Projektdokumentation (Platzhalter)'],
     folder: '/HABM',
-    images: ['/HABM/HABM_Shredded1.png', '/HABM/markus-ruehl.jpg'],
+    images: ['/HABM/HABM_Shredded1.png', '/HABM/aone-man-two-women-portrait-sitting-vintage-chair-30339318.png', '/HABM/markus-ruehl.jpg'],
   },
   {
     id: 'ShenZ',
@@ -82,7 +82,7 @@ export const persons: Person[] = [
     ],
     placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
     folder: '/ShenZ',
-    images: ['/ShenZ.png', '/ShenZ.gif'],
+    images: ['/ShenZ/ShenZ.gif', '/ShenZ/ShenZ.png'],
   },
   {
     id: 'laurenz',
@@ -146,6 +146,6 @@ export const persons: Person[] = [
     ],
     placeholders: ['Sichtungen von Ayshee hier hochladen '],
     folder: '/Ayshee',
-    images: ['/Ayshee_Mueller.png', '/Ayshee_Kind.png'],
+    images: ['/Ayshee/Ayshee_Kind.png', '/Ayshee/Ayshee_Mueller.png'],
   },
 ]
