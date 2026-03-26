@@ -7,12 +7,25 @@ interface PersonComponentProps {
 
 export const PersonComponent = ({ person }: PersonComponentProps) => {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   // Reset loading state when person changes
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setImageLoaded(false)
   }, [person.id])
+
+  // Handle ESC key to close fullscreen
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && selectedImage) {
+        setSelectedImage(null)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [selectedImage])
 
   const renderEducation = (person: Person) =>
     person.education.map((edu) => (
@@ -79,6 +92,25 @@ export const PersonComponent = ({ person }: PersonComponentProps) => {
         <h2>Highlights</h2>
         {person.highlights.length > 0 ? <ul className="list">{renderList(person.highlights)}</ul> : <p>Keine Einträge.</p>}
       </section>
+
+      {person.images.length > 0 && (
+        <section className="section">
+          <h2>Bilder Galerie</h2>
+          <div className="image-gallery">
+            {person.images.map((image, index) => (
+              <div key={index} className="gallery-item" onClick={() => setSelectedImage(image)}>
+                <img src={image} alt={`Galerie Bild ${index + 1} von ${person.name}`} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {selectedImage && (
+        <div className="image-overlay" onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="Vollbild" className="fullscreen-image" />
+        </div>
+      )}
     </>
   )
 }

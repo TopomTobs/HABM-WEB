@@ -15,4 +15,5 @@ export type Person = {
   skills: string[]
   highlights: string[]
   placeholders: string[]
+  images: string[]
 }

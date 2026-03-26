@@ -44,6 +44,7 @@ export const persons: Person[] = [
       'Tutor für Schulwettbewerbe und Hackathons',
     ],
     placeholders: ['Projektdokumentation (Platzhalter)'],
+    images: ['/HABM.jpg'],
   },
   {
     id: 'ShenZ',
@@ -79,6 +80,7 @@ export const persons: Person[] = [
       'Obwohl er schon seit 2002 an der HTL Wels unterrichtet, ist er immer noch der jüngste Lehrer an der Schule.',
     ],
     placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
+    images: ['/ShenZ.png'],
   },
   {
     id: 'laurenz',
@@ -108,6 +110,7 @@ export const persons: Person[] = [
       'Stolzer Vertreter kroatischer Traditionen',
     ],
     placeholders: [],
+    images: ['/lolo1.png', '/LOLO.avif'],
   },
   {
     id: 'Ayshee',
@@ -139,5 +142,6 @@ export const persons: Person[] = [
       'Verteidigerin von Laurenz in sozialen Situationen, insbesondere wenn es um seine Schlafgewohnheiten geht.',
     ],
     placeholders: ['Sichtungen von Ayshee hier hochladen '],
+    images: ['/Ayshee_Mueller.png'],
   },
 ]
