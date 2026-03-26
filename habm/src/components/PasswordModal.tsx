@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 interface PasswordModalProps {
   password: string
   setPassword: (password: string) => void
@@ -7,12 +9,21 @@ interface PasswordModalProps {
 }
 
 export const PasswordModal = ({ password, setPassword, message, verifyPassword, passwordVerified }: PasswordModalProps) => {
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (!passwordVerified && inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [passwordVerified])
+
   return (
     <div id="passwordModal" className={`password-modal-overlay ${passwordVerified ? 'hidden' : ''}`}>
       <div className="password-modal">
         <h2>Zugriff erforderlich</h2>
         <p>Bitte geben Sie das Passwort ein:</p>
         <input
+          ref={inputRef}
           type="password"
           id="passwordInput"
           placeholder="Passwort"
