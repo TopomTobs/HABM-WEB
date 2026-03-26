@@ -13,10 +13,10 @@
     box-sizing: border-box;
 }
 
-body.authenticated {
-    cursor: url('/Hammer_Sickle.svg') 64 64, auto; /*Courser fi*/
+body.authenticated,
+* {
+    cursor: url('/Hammer_Sickle.svg') 64 64, auto !important;
 }
-
 body {
     margin: 0;
     font-family: 'Inter', system-ui, sans-serif;
@@ -117,10 +117,15 @@ body {
 a {
     color: var(--accent);
     text-decoration: none;
+    cursor: url('/Hammer_Sickle.svg') 64 64, auto !important;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+button {
+    cursor: url('/Hammer_Sickle.svg') 64 64, auto !important;
 }
 
 .topbar {
@@ -419,7 +424,6 @@ a:hover {
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
     display: flex;
     align-items: center;
 }
