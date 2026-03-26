@@ -25,4 +25,10 @@ export const packliste: Animal[] = [
     picture: '/EierMann.jpeg',
     reason: 'Will nicht Zahlen'
   },
+  {
+    id: 'animal5',
+    name: 'Aaul Pauer',
+    picture: '/HammerMann.jpg',
+    reason: 'Foltert Mitmenschen weil er Spaß daran hat. Und das Fenster nicht öffnet'
+  }
 ]
