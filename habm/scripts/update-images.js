@@ -18,19 +18,22 @@ function getImagesForFolder(folder) {
   return images;
 }
 
+function getVideosForFolder(folder) {
+  if (!folder) return null;
+
+  const folderPath = path.join(publicDir, folder);
+  if (!fs.existsSync(folderPath)) return null;
+
+  const files = fs.readdirSync(folderPath);
+  const videos = files
+    .filter(file => /\.(mp4|webm|ogg|mov|avi|mkv|ts|flv|m4v|wmv|3gp)$/i.test(file))
+    .map(file => `${folder}/${file}`);
+
+  return videos;
+}
+
 function updatePersonsFile() {
   let content = fs.readFileSync(personsFile, 'utf-8');
-
-  // Simple way: replace images arrays for persons with folder
-  // Since it's hard to parse, use regex to find folder and then images
-
-  // But to make it simple, since we know the structure, replace the images lines after folder
-
-  // For each person, if folder is not '', set images to the list
-
-  // But since it's text, use regex
-
-  // Find all folder: '...' and then the next images: [...]
 
   const lines = content.split('\n');
   let newLines = [];
@@ -50,12 +53,21 @@ function updatePersonsFile() {
         line = `    images: [${imagesStr}],`;
       }
     }
+    if (line.includes('videos:') && currentFolder) {
+      const videos = getVideosForFolder(currentFolder);
+      if (videos && videos.length > 0) {
+        const videosStr = videos.map(video => `'${video}'`).join(', ');
+        line = `    videos: [${videosStr}],`;
+      } else {
+        line = `    videos: [],`;
+      }
+    }
     newLines.push(line);
   }
 
   content = newLines.join('\n');
   fs.writeFileSync(personsFile, content);
-  console.log('Updated persons.ts with automatic images based on folder');
+  console.log('Updated persons.ts with automatic images and videos based on folder');
 }
 
 updatePersonsFile();

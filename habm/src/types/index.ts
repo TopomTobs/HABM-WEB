@@ -5,6 +5,12 @@ export type EducationEntry = {
   details: string
 }
 
+export type Quote = {
+  text: string
+  date?: string
+  recipient?: string
+}
+
 export type Person = {
   id: string
   name: string
@@ -15,10 +21,10 @@ export type Person = {
   skills: string[]
   highlights: string[]
   placeholders: string[]
-
-
+  quotes?: Quote[]
   folder: string
   images: string[]
+  videos?: string[]
 }
 
 export type Animal = {

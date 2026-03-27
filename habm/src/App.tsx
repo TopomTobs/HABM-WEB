@@ -38,6 +38,23 @@ function App() {
     }
   }, [passwordVerified])
 
+  useEffect(() => {
+    // Close sidebar when clicking outside
+    const handleClickOutside = (e: MouseEvent) => {
+      if (!sidebarOpen) return
+      
+      const sidebar = document.getElementById('sidebar')
+      const burger = document.getElementById('burger')
+      
+      if (sidebar && burger && !sidebar.contains(e.target as Node) && !burger.contains(e.target as Node)) {
+        setSidebarOpen(false)
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [sidebarOpen])
+
   const selectedPerson = useMemo(
     () => persons.find((p) => p.id === selectedPersonId) ?? persons[0],
     [selectedPersonId]
@@ -93,7 +110,13 @@ function App() {
         sidebarOpen={sidebarOpen}
       />
 
-      <div className={`overlay ${sidebarOpen ? 'visible' : ''}`} onClick={() => setSidebarOpen(false)} />
+      <div 
+        className={`overlay ${sidebarOpen ? 'visible' : ''}`} 
+        onClick={() => setSidebarOpen(false)}
+        onMouseDown={() => setSidebarOpen(false)}
+        role="button"
+        tabIndex={-1}
+      />
 
       <main id="content" className={`content ${sidebarOpen ? 'shifted' : ''}`} role="main">
         {!passwordVerified ? (
