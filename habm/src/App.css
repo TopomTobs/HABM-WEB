@@ -641,3 +641,73 @@ button {
         padding: 20px 18px;
     }
 }
+
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote {
+    margin: 0;
+    padding: 20px;
+    background: rgba(199, 44, 65, 0.1);
+    border-left: 4px solid rgba(199, 44, 65, 0.6);
+    border-radius: 8px;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--text);
+    position: relative;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 3rem;
+    color: rgba(199, 44, 65, 0.3);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    line-height: 1;
+}
+
+.quote-recipient {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 500;
+    color: rgba(245, 240, 232, 0.8);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.quote-date {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    color: rgba(245, 240, 232, 0.7);
+    font-size: 0.85rem;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+}
+
+.quote-meta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.quote-meta .quote-date {
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+}
+
+.quote-meta .quote-recipient {
+    margin-top: 0;
+    text-align: right;
+    flex: 1;
+}

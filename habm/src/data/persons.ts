@@ -43,6 +43,69 @@ export const persons: Person[] = [
       'Lehrplanentwicklung im Bereich Informatik',
       'Tutor für Schulwettbewerbe und Hackathons',
     ],
+    quotes: [
+      {
+        text: 'Beim programmiern host so vü Ahnung wie a Kuh beim eislaufen.',
+        date: '18.11.2024',
+        recipient: 'zu Klaus'
+      },
+      {
+        text: 'Wonn ma bei ana Frau, sogn ma moi, tiaf eini siagt, donn würd i ihr eher a Beförderung gebn',
+        date: '16.12.2024'
+      },
+      {
+        text: 'Keine Sexuelle Belästigung in meim Unterricht, und scho goa ned zwischn zwa jungen.',
+        date: '19.05.2025'
+      },
+      {
+        text: 'Wos hom a verbrennte Pizza, a gfrorenes Bier und a Schwongare gemeinsam? - Irgend a Depp hod ned rechzeitig ausaghoih',
+        date: '14.10.2025'
+      },
+      {
+        text: 'I bin ned rassistisch, i hab ja a Nega in meim Unterricht, und der is sogar schwul',
+        date: '03.10.2025',
+        recipient: 'KI-Autoantwort auf die Frage ob er rassistisch ist'
+      },
+      {
+        text: 'Ois ersta hob i moi vü Gwoat und Alkohol trunga und donn hob i erst de PLF verbessan kinna',
+        date: '11.11.2025'
+      },
+      {
+        text: 'Das i ohne Vodka ned aufkumm is oke oba bei dir ned',
+        date: '02.12.2025',
+        recipient: 'zu Matthias'
+      },
+      {
+        text: 'De Maschienenbau Klassn brauch ma ned Hazn, de san söba woam',
+        date: '16.12.2025'
+      },
+      {
+        text: 'Wonnst a pupertierendes Kind host konnstas 3 moi am tog gegnde wand klatschn und es schod trotzdem ned',
+        date: '23.12.2025',
+      },
+      {
+        text: 'Du host ned amoi des Koks mit mit teilt',
+        date: '23.12.2025'
+      },
+      {
+        text: 'Do homma in Laurenz sei zukünftige:  a einpockte',
+        date: '24.02.2025'
+      },
+      {
+        text: 'Vo dir brauch i echt a unterschrift vo deine ötan das i di schlogn derf',
+        date: '20.03.2026',
+        recipient: 'zu Matthias'
+      },
+      {
+        text: 'Hoda si de Hodn beim Eisklettern obgfrorn',
+        date: '24.03.2026'
+      },
+      {
+        text: 'Do kumman heimatsgefühle auf” [Spielt die Sovjetische Nationalhymne',
+        date: '24.03.2026'
+      }
+
+    ],
     placeholders: ['Java Aufgaben hier hochladen'],
     folder: '/HABM',
     images: ['/HABM/HABM_Shredded1.png', '/HABM/aone-man-two-women-portrait-sitting-vintage-chair-30339318.png', '/HABM/markus-ruehl.jpg'],
@@ -75,7 +138,7 @@ export const persons: Person[] = [
         year: 'seit 2002',
         details:
           'Fördert soziale Kompetenzen und Teamarbeit durch spezielle Unterrichtseinheiten und Projekte.',
-      },
+      }
     ],
     skills: [],
     highlights: [
@@ -83,8 +146,35 @@ export const persons: Person[] = [
     ],
     placeholders: ['Protokoll hier Hochladen'],
     folder: '/ShenZ',
-    images: ['/ShenZ/Gilete Hari UPSCALED 8K HDR.png', '/ShenZ/ShenZ.gif', '/ShenZ/ShenZ.png'],
+    images: ['/ShenZ/Gilete Hari UPSCALED 8K HDR.png', '/ShenZ/IMG-20260129-WA0020.jpg', '/ShenZ/ShenZ.gif', '/ShenZ/ShenZ.png'],
     videos: [],
+    quotes: [
+      {
+        text: 'Bei uns is jo jetzt a des Big Dick ding do so a problem',
+        date: '29.06.2025'
+      },
+      {
+        text: 'Und ihr hobt jo a nu andere gedanken, hoffendlich hobts fraun im kopf und so manche Männer, und da Mayr alkohol',
+        date: '22.01.2026'
+      },
+      {
+        text: 'Wir hom a scho Schüler ghobt de hom den Packettracer umprogrammiert das des geht',
+        date: '26.01.2026'
+      },
+      {
+        text: 'Vü spaß beim Urologen',
+        date: '02.02.2026',
+        recipient: 'zu Laurenz'
+      },
+      {
+        text: 'Da Lang hod Stellung?! Um Gottes wün, de werdn se gfrein in Linz',
+        date: '13.03.2026'
+      },
+      {
+        text: 'Nau Herr Durkowitsch, sie hom oba a longe Leitung',
+        date: '25.03.2026'
+      }
+    ]
   },
   {
     id: 'laurenz',
@@ -112,6 +202,27 @@ export const persons: Person[] = [
       'Meister im strategischen Schlafen während des Unterrichts',
       'Erfolgreiche Klettertouren in den Alpen',
       'Stolzer Vertreter kroatischer Traditionen',
+    ],
+
+    quotes: [
+      {
+        text: 'Woins Sozialistische Weihnachtskekse',
+        date: '18.11.2024',
+        recipient: 'zu HABM'
+      },
+      {
+        text: 'Wonns gscheid pumpn gengan kinnan sie si am nechstn Maturaball a fesche milf klärn',
+        date: '13.01.2025',
+        recipient: 'zu HABM'
+      },
+      {
+        text: 'De Lisa is a Mausi, de is eh scho 18, des wa wos für sie Herr Professor',
+        date: '30.09.2025'
+      },
+      {
+        text: 'Wonn mei Nachname ned wa donn hätt i safe an Arier nachweis',
+        date: '13.02.2026'
+      }
     ],
     placeholders: [],
     folder: '/LOLO',

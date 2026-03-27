@@ -95,6 +95,25 @@ export const PersonComponent = ({ person }: PersonComponentProps) => {
         {person.highlights.length > 0 ? <ul className="list">{renderList(person.highlights)}</ul> : <p>Keine Einträge.</p>}
       </section>
 
+      {person.quotes && person.quotes.length > 0 && (
+        <section className="section">
+          <h2>Zitate</h2>
+          <div className="quotes-container">
+            {person.quotes.map((quote, index) => (
+              <blockquote key={index} className="quote">
+                "{quote.text}"
+                {(quote.date || quote.recipient) && (
+                  <div className="quote-meta">
+                    {quote.date && <span className="quote-date">{quote.date}</span>}
+                    {quote.recipient && <span className="quote-recipient">— {quote.recipient}</span>}
+                  </div>
+                )}
+              </blockquote>
+            ))}
+          </div>
+        </section>
+      )}
+
       {(person.images.length > 0 || (person.videos && person.videos.length > 0)) && (
         <section className="section">
           <h2>Medien Galerie</h2>
