@@ -8,16 +8,16 @@ export const packliste: Animal[] = [
     reason: 'Gewalttätig'
   },
   {
-    id: 'animal2',
-    name: 'LOLO D.', // Name geändert, um Datenschutz zu gewährleisten
-    picture: '/LOLO/LOLO_EIS.jpg',
-    reason: 'Jüdisches Verhalten'
-  },
-  {
     id: 'Dario',
     name: 'Dario',
     picture: '/Dario.png',
     reason: 'Missbrauch von Kindern wird vermutet'
+  },
+  {
+    id: 'animal2',
+    name: 'LOLO D.', // Name geändert, um Datenschutz zu gewährleisten
+    picture: '/LOLO/LOLO_EIS.jpg',
+    reason: 'Jüdisches Verhalten'
   },
   {
     id: 'animal4',
@@ -28,7 +28,13 @@ export const packliste: Animal[] = [
   {
     id: 'animal5',
     name: 'Aaul Pauer',
-    picture: '/HammerMann.jpg',
+    picture: '/Locked_In_Paul.jpg',
     reason: 'Foltert Mitmenschen weil er Spaß daran hat. Und das Fenster nicht öffnet'
+  },
+  {
+    id: 'Löress',
+    name: 'Lörress',
+    picture: '/DerDieDasLörres.jpg',
+    reason: 'Weil Frau'
   }
 ]

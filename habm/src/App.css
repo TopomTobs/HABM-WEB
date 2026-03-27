@@ -129,9 +129,11 @@ button {
 }
 
 .topbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 40;
+    left: 0;
+    right: 0;
+    z-index: 50;
     display: flex;
     align-items: center;
     padding: 16px 20px;
@@ -361,7 +363,7 @@ button {
 
 .content {
 
-    padding-top: 2px;
+    padding-top: 70px;
     padding-left: 10%;
     padding-right: 10%;
     min-height: 100vh;
@@ -502,12 +504,12 @@ button {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
-    z-index: 25;
+    z-index: 26;
 }
 
 .overlay.visible {
     opacity: 1;
-    pointer-events: all;
+    pointer-events: auto;
 }
 .image-gallery {
     display: grid;
@@ -537,6 +539,41 @@ button {
     object-fit: contain;
     display: block;
     transition: filter 0.3s ease;
+}
+
+.gallery-video-item {
+    position: relative;
+}
+
+.gallery-video-item video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(199, 44, 65, 0.8);
+    color: var(--text);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.gallery-video-item:hover .video-overlay-icon {
+    background: var(--accent2);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .gallery-item:hover img {
@@ -573,6 +610,12 @@ button {
 }
 
 .fullscreen-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.fullscreen-video {
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;

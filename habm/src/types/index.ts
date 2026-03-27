@@ -19,6 +19,7 @@ export type Person = {
 
   folder: string
   images: string[]
+  videos?: string[]
 }
 
 export type Animal = {

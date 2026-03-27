@@ -23,7 +23,10 @@ export const Sidebar = ({
       <li
         key={person.id}
         className={['person-item', selectedPersonId === person.id && currentView === 'persons' ? 'active' : ''].join(' ')}
-        onClick={() => onSelectPerson(person.id)}
+        onClick={(e) => {
+          e.stopPropagation()
+          onSelectPerson(person.id)
+        }}
       >
         {person.name}
       </li>
@@ -45,7 +48,10 @@ export const Sidebar = ({
         <ul className="extras-list">
           <li
             className={['extras-item', currentView === 'packliste' ? 'active' : ''].join(' ')}
-            onClick={() => onSelectPackliste()}
+            onClick={(e) => {
+              e.stopPropagation()
+              onSelectPackliste()
+            }}
           >
             Packliste
           </li>

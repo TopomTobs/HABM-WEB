@@ -43,9 +43,10 @@ export const persons: Person[] = [
       'Lehrplanentwicklung im Bereich Informatik',
       'Tutor für Schulwettbewerbe und Hackathons',
     ],
-    placeholders: ['Projektdokumentation (Platzhalter)'],
+    placeholders: ['Java Aufgaben hier hochladen'],
     folder: '/HABM',
     images: ['/HABM/HABM_Shredded1.png', '/HABM/aone-man-two-women-portrait-sitting-vintage-chair-30339318.png', '/HABM/markus-ruehl.jpg'],
+    videos: [],
   },
   {
     id: 'ShenZ',
@@ -80,9 +81,10 @@ export const persons: Person[] = [
     highlights: [
       'Obwohl er schon seit 2002 an der HTL Wels unterrichtet, ist er immer noch der jüngste Lehrer an der Schule.',
     ],
-    placeholders: ['Protokoll hier Hochladen', 'Bild 2 (Platzhalter)'],
+    placeholders: ['Protokoll hier Hochladen'],
     folder: '/ShenZ',
-    images: ['/ShenZ/ShenZ.gif', '/ShenZ/ShenZ.png'],
+    images: ['/ShenZ/Gilete Hari UPSCALED 8K HDR.png', '/ShenZ/ShenZ.gif', '/ShenZ/ShenZ.png'],
+    videos: [],
   },
   {
     id: 'laurenz',
@@ -114,6 +116,7 @@ export const persons: Person[] = [
     placeholders: [],
     folder: '/LOLO',
     images: ['/LOLO/LOLO_EIS.jpg', '/LOLO/LOLOsHochzeit.png', '/LOLO/PXL_20251119_102401925.jpg', '/LOLO/PXL_20251119_132347252.MP.jpg', '/LOLO/PXL_20251119_132348221.jpg', '/LOLO/PXL_20251119_132354254.MP.jpg', '/LOLO/PXL_20251119_132354509.jpg', '/LOLO/PXL_20251119_132452693.MP.jpg', '/LOLO/lolo2.png'],
+    videos: [],
   },
   {
     id: 'Ayshee',
@@ -147,11 +150,34 @@ export const persons: Person[] = [
     placeholders: ['Sichtungen von Ayshee hier hochladen '],
     folder: '/Ayshee',
     images: ['/Ayshee/Ayshee_Kind.png', '/Ayshee/Ayshee_Mueller.png'],
+    videos: [],
+  },
+  {
+    id: 'Erlang',
+    name: 'Erlang',
+    role: '',
+    profileImage: '/ErLang.jpg',
+    summary: '',
+    education: [
+      {
+        title: '',
+        institution: '',
+        year: '',
+        details:
+          '',
+      },
+    ],
+    skills: [],
+    highlights: [],
+    placeholders: ['Erlang Sichtungen hier hochladen'],
+    folder: '/Erlang',
+    images: ['/Erlang/ErLang1243.jpg', '/Erlang/erlang.gif', '/Erlang/oh helll naw.jpg'],
+    videos: [],
   },
   {
     id: 'Tops',
     name: 'Tops',
-    role: '',
+    role: 'Schwager von LOLO',
     profileImage: '/Tops.jpg',
     summary: '',
     education: [
@@ -167,6 +193,7 @@ export const persons: Person[] = [
     highlights: [],
     placeholders: [],
     folder: '/Tops',
-    images: ['/Tops/1.jpg', '/Tops/2.jpg', '/Tops/3.jpg', '/Tops/4.jpg', '/Tops/5.jpg', '/Tops/6.jpg', '/Tops/7.jpg', '/Tops/8.jpg'],
+    images: ['/Tops/1.jpg', '/Tops/2.jpg', '/Tops/3.jpg', '/Tops/4.jpg', '/Tops/5.jpg', '/Tops/6.jpg', '/Tops/7.jpg', '/Tops/8.jpg', '/Tops/Fußball topomtobs.jpeg', '/Tops/Kletter topomtobs.png', '/Tops/Screenshot 2025-10-02 at 10.31.49.png', '/Tops/hard images pt 1.jpeg', '/Tops/hard to watch - hard while watching.jpeg', '/Tops/hängender tops.png', '/Tops/saeugling tobs.png', '/Tops/tobs aushilfe.jpeg'],
+    videos: [],
   },
 ]
